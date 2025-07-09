@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>K-anonymat test</title>
+</head>
+<body>
+  <h1>Test de k-anonymat</h1>
+  <form method="post">
+    <label for="k">Valeur de k :</label>
+    <input type="number" name="k" value="3" min="1">
+    <button type="submit">Analyser</button>
+  </form>
+
+  {% if result is not none %}
+    <h2>Résultat :</h2>
+    {% if result %}
+      ✅ Le dataset est k-anonyme pour k = {{k}}
+    {% else %}
+      ❌ Le dataset n'est PAS k-anonyme pour k = {{k}}
+    {% endif %}
+    {% if downloadable %}
+    <br>
+    <a href="{{ url_for('main_bp.download') }}">
+        📥 Télécharger le fichier anonymisé
+    </a>
+{% endif %}
+
+
+    <h3>Groupes :</h3>
+    {{ groups|safe }}
+
+    {% if not result %}
+      <h3>Groupes problématiques :</h3>
+      {{ violators|safe }}
+    {% endif %}
+  {% endif %}
+</body>
+</html>

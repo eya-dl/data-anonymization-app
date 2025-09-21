@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" PolicyId="Policy-14" RuleCombiningAlgId="deny-overrides">
+  <Target>
+    <Subjects>
+      <Subject>
+        <Attribute AttributeId="profil:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">hhhhhhhhhhh</AttributeValue>
+        </Attribute>
+      </Subject>
+    </Subjects>
+    <Resources>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Import data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Add data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Create data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Collect data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Summarize data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Model data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Delete data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Normalize data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Encrypt data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Organize data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Archive data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Export data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Process data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Analyze data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Filter data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Protect data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Annotate data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Pseudonymize data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Anonymize data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Index data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Cluster data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Report data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Clean data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Integrate data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Secure data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Link data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Compare data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Share data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Merge data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Convert data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Store data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Mine data</AttributeValue>
+        </Attribute>
+      </Resource>
+    </Resources>
+    <Environments>
+      <Environment>
+        <Attribute AttributeId="champ:type" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Identifiant direct</AttributeValue>
+        </Attribute>
+      </Environment>
+      <Environment>
+        <Attribute AttributeId="champ:type" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Quasi-identifiant</AttributeValue>
+        </Attribute>
+      </Environment>
+      <Environment>
+        <Attribute AttributeId="champ:type" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Champ sensible</AttributeValue>
+        </Attribute>
+      </Environment>
+      <Environment>
+        <Attribute AttributeId="champ:type" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Champ non sensible</AttributeValue>
+        </Attribute>
+      </Environment>
+    </Environments>
+  </Target>
+  <Rule RuleId="rule-1" Effect="Permit"/>
+</Policy>

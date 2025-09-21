@@ -1,5 +1,7 @@
-from . import db
+from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+
+db = SQLAlchemy()  # 👈 On définit db ici une seule fois
 
 # Table de liaison Dataset <-> Profil
 datasets_profils = db.Table(
@@ -22,6 +24,9 @@ class User(db.Model):
     email = db.Column(db.String, unique=True, nullable=False)
     mot_de_passe = db.Column(db.String, nullable=False)
     profil_id = db.Column(db.Integer, db.ForeignKey('profil.id'), nullable=True)
+    
+    # Relation vers Dataset (un utilisateur peut avoir plusieurs datasets)
+    datasets = db.relationship('Dataset', back_populates='owner', foreign_keys='Dataset.owner_id')
 
     def to_dict(self):
         return {
@@ -29,7 +34,8 @@ class User(db.Model):
             "nom": self.nom,
             "email": self.email,
             "profil_id": self.profil_id,
-            "profil_nom": self.profil.nom if self.profil else None
+            "profil_nom": self.profil.nom if self.profil else None,
+            "datasets_count": len(self.datasets)
         }
 
 class Dataset(db.Model):
@@ -37,39 +43,43 @@ class Dataset(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     titre = db.Column(db.String, nullable=False)
     date_creation = db.Column(db.DateTime, default=datetime.utcnow)
-    data_owner = db.Column(db.String(255))
     status = db.Column(db.String(50))
     contenu = db.Column(db.JSON, nullable=False)
     contenu_anonymized = db.Column(db.JSON)
-
-    # Relation many-to-many avec les profils
+    
+    
+    # Clé étrangère vers User
+    owner_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    owner = db.relationship('User', back_populates='datasets', foreign_keys=[owner_id])
+    
+    # Relation many-to-many existante avec Profil
     profils = db.relationship('Profil', secondary=datasets_profils, back_populates='datasets')
 
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "titre": self.titre,
+            "date_creation": self.date_creation.isoformat(),
+            "status": self.status,
+            "owner_id": self.owner_id,
+            "owner_name": self.owner.nom if self.owner else None,
+            "profils": [p.nom for p in self.profils]
+        }
 class Profil(db.Model):
     __tablename__ = 'profil'
     id = db.Column(db.Integer, primary_key=True)
     nom = db.Column(db.String(50), unique=True, nullable=False)
 
-    # Relation avec utilisateurs
     users = db.relationship('User', backref='profil', lazy=True)
-
-    # Relation avec datasets (many-to-many)
     datasets = db.relationship('Dataset', secondary=datasets_profils, back_populates='profils')
-
-    # Relation avec actions (many-to-many)
     actions = db.relationship('Action', secondary=profils_actions, backref=db.backref('profils', lazy='dynamic'))
-
-    # Relation avec types de champs sensibles
-    types_champs = db.relationship(
-        'ProfilsTypesChamps',
-        back_populates='profil',
-        cascade='all, delete-orphan'
-    )
+    types_champs = db.relationship('ProfilsTypesChamps', back_populates='profil', cascade='all, delete-orphan')
 
 class Action(db.Model):
     __tablename__ = 'actions'
     id = db.Column(db.Integer, primary_key=True)
     nom = db.Column(db.String(100), unique=True, nullable=False)
+
 class ChampSensible(db.Model):
     __tablename__ = 'champs_sensibles'
 
@@ -85,7 +95,6 @@ class ChampSensible(db.Model):
     __table_args__ = (
         db.UniqueConstraint('dataset_id', 'nom', name='unique_champ_per_dataset'),
     )
-
 
 class ProfilsTypesChamps(db.Model):
     __tablename__ = 'profils_types_champs'

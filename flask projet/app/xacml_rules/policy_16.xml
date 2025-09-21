@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" PolicyId="Policy-16" RuleCombiningAlgId="deny-overrides">
+  <Target>
+    <Subjects>
+      <Subject>
+        <Attribute AttributeId="profil:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">madame manel</AttributeValue>
+        </Attribute>
+      </Subject>
+    </Subjects>
+    <Resources>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Import data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Create data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Collect data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Add data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Merge data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Link data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Organize data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Index data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Integrate data</AttributeValue>
+        </Attribute>
+      </Resource>
+    </Resources>
+    <Environments>
+      <Environment>
+        <Attribute AttributeId="champ:type" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Champ non sensible</AttributeValue>
+        </Attribute>
+      </Environment>
+    </Environments>
+  </Target>
+  <Rule RuleId="rule-1" Effect="Permit"/>
+</Policy>

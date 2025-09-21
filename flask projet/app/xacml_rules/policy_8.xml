@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" PolicyId="Policy-8" RuleCombiningAlgId="deny-overrides">
+  <Target>
+    <Subjects>
+      <Subject>
+        <Attribute AttributeId="profil:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">hhhhhhhj</AttributeValue>
+        </Attribute>
+      </Subject>
+    </Subjects>
+    <Resources>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Encrypt data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Secure data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Protect data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Anonymize data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Pseudonymize data</AttributeValue>
+        </Attribute>
+      </Resource>
+    </Resources>
+    <Environments>
+      <Environment>
+        <Attribute AttributeId="champ:type" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Identifiant direct</AttributeValue>
+        </Attribute>
+      </Environment>
+      <Environment>
+        <Attribute AttributeId="champ:type" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Champ sensible</AttributeValue>
+        </Attribute>
+      </Environment>
+      <Environment>
+        <Attribute AttributeId="champ:type" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Quasi-identifiant</AttributeValue>
+        </Attribute>
+      </Environment>
+    </Environments>
+  </Target>
+  <Rule RuleId="rule-1" Effect="Permit"/>
+</Policy>

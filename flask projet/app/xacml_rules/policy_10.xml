@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" PolicyId="Policy-10" RuleCombiningAlgId="deny-overrides">
+  <Target>
+    <Subjects>
+      <Subject>
+        <Attribute AttributeId="profil:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">eeeeeeeeeeeeeeeeeeeeeeee</AttributeValue>
+        </Attribute>
+      </Subject>
+    </Subjects>
+    <Resources/>
+    <Environments/>
+  </Target>
+  <Rule RuleId="rule-1" Effect="Permit"/>
+</Policy>

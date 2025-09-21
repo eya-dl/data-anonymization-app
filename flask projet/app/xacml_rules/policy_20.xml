@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" PolicyId="Policy-20" RuleCombiningAlgId="deny-overrides">
+  <Target>
+    <Subjects>
+      <Subject>
+        <Attribute AttributeId="profil:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">student</AttributeValue>
+        </Attribute>
+      </Subject>
+    </Subjects>
+    <Resources>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Clean data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Create data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Add data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Normalize data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Collect data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Convert data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Filter data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Process data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Analyze data</AttributeValue>
+        </Attribute>
+      </Resource>
+      <Resource>
+        <Attribute AttributeId="action:nom" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Import data</AttributeValue>
+        </Attribute>
+      </Resource>
+    </Resources>
+    <Environments>
+      <Environment>
+        <Attribute AttributeId="champ:type" IncludeInResult="false">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Identifiant direct</AttributeValue>
+        </Attribute>
+      </Environment>
+    </Environments>
+  </Target>
+  <Rule RuleId="rule-1" Effect="Permit"/>
+</Policy>
